@@ -1,1 +1,1 @@
-# project-1
+# Weather / Last.FM App
