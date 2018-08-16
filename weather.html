@@ -11,14 +11,20 @@
         crossorigin="anonymous">
     <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
         crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 </head>
 
 <body>
+    <br><br>
+    <div class="card col-xs-12 col-md-6 mx-auto text-center">
+        <div class="card-body">
+            <div class="city"></div>
+            <div class="clouds"></div>
+            <div class="temp"></div>
+            <div id="time"></div>
+        </div>
+    </div>
 
-    <!-- Retrieved data will be dumped here -->
-    <div class="city"></div>
-    <div class="clouds"></div>
-    <div class="temp"></div>
 
     <script src="weather.js"></script>
 </body>
