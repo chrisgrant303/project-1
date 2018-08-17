@@ -12,13 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="../project-1/assets/css/style.css">
 
     <!-- Compiled and minified JavaScript -->
-
-
 </head>
+
 
 <body>
     <!-- Nav Bar -->
@@ -26,39 +24,99 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center">Logo</a>
         </div>
-        <br>
-        <div class="container">
-            <div class="row" style="background-color: azure" item-width="200px">
-                <div class="col-md-6">weather</div>
-            </div>
-            <div class="col-md-6">Degrees</div>
-        </div>
-        <br>
-        <div class="MediaPlayer">for Media Player</div>
-
-        <button>play button</button>
-
-
-        <div>
-            <div>play list</div>
-            <table>list1</table>
-            <table>list2</table>
-            <table>list2</table>
-        </div>
-
-
     </nav>
-    <div>
 
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 firstCol">
+                <!-- weather section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mycol1">
+                            <table>City</table>
+                            <table>Clouds</table>
+                        </div>
+                        <div class="col-md-6 mycol1">Temp</div>
+                    </div>
+                </div>
+                <!-- Media Box -->
+                <br>
+                <div class="MediaPlayer">for Media Player</div>
+
+
+                <!-- buttons -->
+                <div class="play">
+                    <i class="fas fa-play fa-3x "></i>
+                </div>
+
+                <div class="back">
+                    <i class="fal fa-angle-double-left fa fa-3x"></i>
+
+                </div>
+                <div class="next">
+                    <i class="fal fa-angle-double-right fa fa-3x"></i>
+                </div>
+                <div class="like">
+                    <i class="fas fa-thumbs-up fa-2x"></i>
+                </div>
+
+                <!-- playlist tables -->
+
+            </div>
+            <div class="col-md-4 secondCol">Play List</div>
+            <div>
+                <div class="list">
+                    <table>list1</table>
+                    <table>list2</table>
+                    <table>list2</table>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
+    <!-- <div class="card col-xs-12 col-md-6 mx-auto text-center">
+        <div class="card-body">
+            <div class="city">city</div>
+            <div class="clouds">clouds</div>
+            <div class="temp">temp</div>
+            <div id="time">time</div>
+        </div>
+    </div> -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ALL SCRIPTS HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
         crossorigin='anonymous'></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks",
+            authDomain: "atmo-a53af.firebaseapp.com",
+            databaseURL: "https://atmo-a53af.firebaseio.com",
+            projectId: "atmo-a53af",
+            storageBucket: "atmo-a53af.appspot.com",
+            messagingSenderId: "907972133093"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="assets/javascript/app.js"></script>
 </body>
 
