@@ -1,0 +1,103 @@
+body {
+
+}
+
+nav {
+
+}
+.firstCol{
+    
+    background-color: rgb(60, 75, 216);
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.secondCol{
+    background-color: rgb(60, 75, 216);
+    align-content: left;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.mycol1{
+    
+    background-color: rgb(60, 75, 216);
+    align-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.mycol2{
+    background-color: rgb(60, 75, 216);
+    align-content: left;
+    width: 100px;
+    height: 100px;
+}
+
+.container1 {
+    align-content: center;
+    text-align: center;
+    background-color: rgb(60, 75, 216);
+    width: 400px;
+    height: 200px;
+}
+.MediaPlayer{
+    text-align: center;
+    background-color: rgb(60, 75, 216);
+    width: 466px;
+    height: 200px;
+    position: absolute;
+    left: -1px;
+    top: 146px;
+}
+div.play{
+    position: absolute;
+    left: 225px;
+    color: #8c8a8a;
+    top: 365px;
+}
+div.back{
+    position: absolute;
+    left: 72px;
+    color: #8c8a8a;
+    top: 365px;
+}
+div.next{
+    position: absolute;
+    left: 355px;
+    color: #8c8a8a;
+    top: 365px;
+}
+div.like{
+    position: absolute;
+    left: 5px;
+    color: #5b49f5;
+    top: 370px;
+}
+
+.PL{
+    align-content: center;
+    position: absolute;
+    left: 627px;
+}
+
+.list{
+    align-content: center;
+    position: absolute;
+    left: 639px;
+    top: 122px;
+}
+
+@media (max-width:360px){
+    body {
+      width: 100%;
+    }
+
+
+@media (max-width:780px){
+    body {
+      width: 100%;
+    }
