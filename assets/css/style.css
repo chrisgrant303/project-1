@@ -1,12 +1,4 @@
-body {
-
-}
-
-nav {
-
-}
-.firstCol{
-    
+.firstCol {
     background-color: rgb(60, 75, 216);
     align-content: center;
     width: 100%;
@@ -14,7 +6,7 @@ nav {
     text-align: center;
 }
 
-.secondCol{
+.secondCol {
     background-color: rgb(60, 75, 216);
     align-content: left;
     width: 100%;
@@ -22,15 +14,14 @@ nav {
     text-align: center;
 }
 
-.mycol1{
-    
+.mycol1 {
     background-color: rgb(60, 75, 216);
     align-content: center;
     width: 100px;
     height: 100px;
 }
 
-.mycol2{
+.mycol2 {
     background-color: rgb(60, 75, 216);
     align-content: left;
     width: 100px;
@@ -44,7 +35,8 @@ nav {
     width: 400px;
     height: 200px;
 }
-.MediaPlayer{
+
+.MediaPlayer {
     text-align: center;
     background-color: rgb(60, 75, 216);
     width: 466px;
@@ -53,51 +45,56 @@ nav {
     left: -1px;
     top: 146px;
 }
-div.play{
+
+div.play {
     position: absolute;
     left: 225px;
     color: #8c8a8a;
     top: 365px;
 }
-div.back{
+
+div.back {
     position: absolute;
     left: 72px;
     color: #8c8a8a;
     top: 365px;
 }
-div.next{
+
+div.next {
     position: absolute;
     left: 355px;
     color: #8c8a8a;
     top: 365px;
 }
-div.like{
+
+div.like {
     position: absolute;
     left: 5px;
     color: #5b49f5;
     top: 370px;
 }
 
-.PL{
+.PL {
     align-content: center;
     position: absolute;
     left: 627px;
 }
 
-.list{
+.list {
     align-content: center;
     position: absolute;
     left: 639px;
     top: 122px;
 }
 
-@media (max-width:360px){
+@media (max-width:360px) {
     body {
-      width: 100%;
+        width: 100%;
     }
+}
 
-
-@media (max-width:780px){
+@media (max-width:780px) {
     body {
-      width: 100%;
+        width: 100%;
     }
+}
