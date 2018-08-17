@@ -1,10 +1,4 @@
 // Firebase & User Authentication Initialization
-var database = firebase.database();
-
-database.ref().on("value", function (snapshot) {
-    console.log(snapshot.val());
-});
-
 window.onGoogleYoloLoad = (googleyolo) => {
     // The 'googleyolo' object is ready for use.
 };
@@ -36,4 +30,10 @@ ui.disableAutoSignIn();
 var provider = new firebase.auth.GoogleAuthProvider();
 
 firebase.auth().signInWithRedirect(provider);
+
+var database = firebase.database();
+
+database.ref().on("value", function (snapshot) {
+    console.log(snapshot.val());
+});
 // End Firebase Initialization
