@@ -1,54 +1,38 @@
-// Firebase & User Authentication Initialization
-window.onGoogleYoloLoad = (googleyolo) => {
-    // The 'googleyolo' object is ready for use.
-};
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 ui.start('#firebaseui-auth-container', {
-    signInOptions: [{
-            // Google provider must be enabled in Firebase Console to support one-tap
-            // sign-up.
-            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            // Required to enable this provider in one-tap sign-up.
-            authMethod: 'https://accounts.google.com',
-            // Required to enable ID token credentials for this provider.
-            // This can be obtained from the Credentials page of the Google APIs
-            // console.
-            clientId: 'xxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
-        },
-        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    signInOptions: [
+        // List of OAuth providers supported.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
-    // Required to enable one-tap sign-up credential helper.
-    credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO
+    // Other config options...
 });
-// Auto sign-in for returning users is enabled by default except when prompt is
-// not 'none' in the Google provider custom parameters. To manually disable:
-ui.disableAutoSignIn();
 
-var provider = new firebase.auth.GoogleAuthProvider();
+var uiConfig = {
+    callbacks: {
+        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+            // User successfully signed in.
+            // Return type determines whether we continue the redirect automatically
+            // or whether we leave that to developer to handle.
+            return true;
+        },
+        uiShown: function () {
+            // The widget is rendered.
+            // Hide the loader.
+            document.getElementById('loader').style.display = 'none';
+        }
+    },
+    // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+    signInFlow: 'popup',
+    signInSuccessUrl: 'http://chrisgrant303.github.io/project-1/',
+    signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    ],
+    // Terms of service url.
+    tosUrl: '<your-tos-url>',
+    // Privacy policy url.
+    privacyPolicyUrl: '<your-privacy-policy-url>'
+};
 
-firebase.auth().signInWithRedirect(provider);
-///////////////////////////////////////////////////////////////////////////////////////////
-
-
-// USER IDENTIFICATION ////////////////////////////////////////////////////////////////////
-var user = firebase.auth().currentUser;
-
-if (user != null) {
-    user.providerData.forEach(function (profile) {
-        console.log("Sign-in provider: " + profile.providerId);
-        console.log("  Provider-specific UID: " + profile.uid);
-        console.log("  Name: " + profile.displayName);
-        console.log("  Email: " + profile.email);
-        console.log("  Photo URL: " + profile.photoURL);
-    });
-}
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-var database = firebase.database();
-
-database.ref().on("value", function (snapshot) {
-    console.log(snapshot.val());
-});
+ui.start('#firebaseui-auth-container', uiConfig);
