@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atmo Login Page</title>
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks",
+            authDomain: "atmo-a53af.firebaseapp.com",
+            databaseURL: "https://atmo-a53af.firebaseio.com",
+            projectId: "atmo-a53af",
+            storageBucket: "atmo-a53af.appspot.com",
+            messagingSenderId: "907972133093"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
+    <script src="https://smartlock.google.com/client"></script>
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'https://chrisgrant303.github.io/project-1/',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+</head>
+
+<body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1>Welcome to atmo!</h1>
+    <div id="firebaseui-auth-container"></div>
+</body>
+
+</html>
