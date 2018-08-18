@@ -16,8 +16,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="../project-1/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript">
+        initApp = function () {
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // User is signed in.
+                    var displayName = user.displayName;
+                    var email = user.email;
+                    var emailVerified = user.emailVerified;
+                    var photoURL = user.photoURL;
+                    var uid = user.uid;
+                    var phoneNumber = user.phoneNumber;
+                    var providerData = user.providerData;
 
+                    var database = firebase.database();
+
+                    database.ref().push({
+                        name: [user.displayName],
+                        avatar: [user.photoURL]
+                    });
+                }
+            }, function (error) {});
+        };
+
+        window.addEventListener('load', function () {
+            initApp()
+        });
+    </script>
     <!-- Compiled and minified JavaScript -->
 </head>
 
@@ -79,9 +105,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- <div class="card col-xs-12 col-md-6 mx-auto text-center">
         <div class="card-body">
             <div class="city">city</div>
@@ -90,18 +113,6 @@
             <div id="time">time</div>
         </div>
     </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- ALL SCRIPTS HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -119,7 +130,7 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="assets/javascript/app.js"></script>
+    <!-- <script src="assets/javascript/app.js"></script> -->
 </body>
 
 </html>
