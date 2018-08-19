@@ -8,13 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!-- Firebase Initialization -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="../project-1/assets/css/style.css">
+    <script src="assets/javascript/firebase-database.js"></script>
 
     <!-- Compiled and minified JavaScript -->
 </head>
@@ -48,6 +52,10 @@
                     </a>
                 </li>
             </ul>
+    <!-- Nav Bar -->
+    <nav style="background-color:rgb(61, 61, 213)">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Logo</a>
         </div>
     </nav>
 
@@ -164,7 +172,23 @@
     };
     firebase.initializeApp(config);
 </script>
-<script src="assets/javascript/app.js "></script>
+
+    <!-- ALL SCRIPTS HERE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks",
+            authDomain: "atmo-a53af.firebaseapp.com",
+            databaseURL: "https://atmo-a53af.firebaseio.com",
+            projectId: "atmo-a53af",
+            storageBucket: "atmo-a53af.appspot.com",
+            messagingSenderId: "907972133093"
+        };
+        firebase.initializeApp(config);
+    </script>
 </body>
 
 </html>
