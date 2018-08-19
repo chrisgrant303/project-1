@@ -16,14 +16,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../project-1/assets/css/style.css">
     <script src="assets/javascript/firebase-database.js"></script>
+
     <!-- Compiled and minified JavaScript -->
 </head>
 
 
 <body>
-
+    <!-- Nav -->
+    <nav>
+        <div class="nav-wrapper" style="background-color: rgb(24, 95, 226)">
+            <a href="#!" class="brand-logo">
+                <i class="material-icons">cloud</i>Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">
+                        <i class="material-icons">search</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="badges.html">
+                        <i class="material-icons">library_music</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="collapsible.html">
+                        <i class="material-icons">refresh</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile.html">
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                </li>
+            </ul>
     <!-- Nav Bar -->
     <nav style="background-color:rgb(61, 61, 213)">
         <div class="nav-wrapper">
@@ -31,62 +59,119 @@
         </div>
     </nav>
 
-    <br>
+    <!-- Div Row  1 -->
     <div class="container">
         <div class="row">
-            <div class="col-md-8 firstCol">
-                <!-- weather section -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 mycol1">
-                            <table>City</table>
-                            <table>Clouds</table>
-                        </div>
-                        <div class="col-md-6 mycol1">Temp</div>
+            <div class="col-md-8">
+                <div class="card text-white bg-primary mb-3 firstCol">
+                    <div class=" card-header ">Weather</div>
+                    <div class="card-body ">
+                        <p class="card-text ">Partly Cloudy
+                            <img src="../project-1/assets/images/Weather-Snow.png" width="120px" height="120px" alt="" srcset="">
+                        </p>
+
                     </div>
                 </div>
-                <!-- Media Box -->
-                <br>
-                <div class="MediaPlayer">for Media Player</div>
-
-
-                <!-- buttons -->
-                <div class="play">
-                    <i class="fas fa-play fa-3x "></i>
-                </div>
-
-                <div class="back">
-                    <i class="fal fa-angle-double-left fa fa-3x"></i>
-
-                </div>
-                <div class="next">
-                    <i class="fal fa-angle-double-right fa fa-3x"></i>
-                </div>
-                <div class="like">
-                    <i class="fas fa-thumbs-up fa-2x"></i>
-                </div>
-
-                <!-- playlist tables -->
-
             </div>
-            <div class="col-md-4 secondCol">Play List</div>
-            <div>
-                <div class="list">
-                    <table>list1</table>
-                    <table>list2</table>
-                    <table>list2</table>
+            <div class="col-md-3 ">
+                <div class="card text-white bg-primary mb-3 secondCol">
+                    <div class="card-header ">Temp</div>
+                    <div class="card-body ">
+                        <h1 class="card-title ">35 ℉</h1>
+                        <p class="card-text "></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div class="card col-xs-12 col-md-6 mx-auto text-center">
-        <div class="card-body">
-            <div class="city">city</div>
-            <div class="clouds">clouds</div>
-            <div class="temp">temp</div>
-            <div id="time">time</div>
+
+    <!-- Div Row  2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card text-white bg-primary mb-3 thirdCol">
+                    <div class=" card-header ">
+                        <i class="material-icons">thumb_up</i>
+                    </div>
+                    <div class="card-body ">
+                        <p class="card-text ">
+                            <audio controls>
+                                <source src="myAudio.mp3" type="audio/mp3">
+                                <source src="myAudio.ogg" type="audio/ogg">
+                                <p>Your browser doesn't support HTML5 audio. Here is a
+                                    <a href="myAudio.mp4">link to the audio</a> instead.</p>
+                            </audio>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fourthCol">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Play List</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div> -->
+
+    </div>
+    </div>
+
+
+</body>
+
+
+
+
+<!-- ALL SCRIPTS HERE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+    crossorigin='anonymous'></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
+<link type="text/css " rel="stylesheet " href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css " />
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js "></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks ",
+        authDomain: "atmo-a53af.firebaseapp.com ",
+        databaseURL: "https://atmo-a53af.firebaseio.com ",
+        projectId: "atmo-a53af ",
+        storageBucket: "atmo-a53af.appspot.com ",
+        messagingSenderId: "907972133093 "
+    };
+    firebase.initializeApp(config);
+</script>
 
     <!-- ALL SCRIPTS HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -104,7 +189,6 @@
         };
         firebase.initializeApp(config);
     </script>
-    <!-- <script src="assets/javascript/app.js"></script> -->
 </body>
 
 </html>

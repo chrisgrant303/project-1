@@ -1,18 +1,23 @@
+body {
+background-image: url(../images/Blue-Backgrounds-HD-005.jpg);
+background-size: auto;
+background-repeat: no-repeat;
+}
+
 .firstCol {
     background-color: rgb(60, 75, 216);
     align-content: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    width: 560px;
+    height: 225px;
 }
 
 .secondCol {
-    background-color: rgb(60, 75, 216);
-    align-content: left;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    width: 150px;
+    height: 225px;
 }
+
+p {
+text-align: center;
 
 .mycol1 {
     background-color: rgb(60, 75, 216);
@@ -27,14 +32,18 @@
     width: 100px;
     height: 100px;
 }
-
-.container1 {
+  
+.thirdCol {
     align-content: center;
-    text-align: center;
-    background-color: rgb(60, 75, 216);
-    width: 400px;
-    height: 200px;
+    width: 545px;
+    height: 350px;
 }
+
+.fourthCol{
+    background-color: rgb(0, 165, 239);
+    align-content: left;
+    text-align: center;
+    height: 400px;
 
 .MediaPlayer {
     text-align: center;
@@ -95,6 +104,6 @@ div.like {
 
 @media (max-width:780px) {
     body {
-        width: 100%;
+    width: 100%;
     }
 }
