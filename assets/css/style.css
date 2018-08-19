@@ -1,92 +1,35 @@
 body {
-background-image: url(../images/BlueBeige_gradient.jpg)
+background-image: url(./images/Blue-Backgrounds-HD-005.jpg);
+background-size: auto;
+background-repeat: no-repeat;
 }
-
 nav {
-    
 
 }
-.ThirdCol{
-    
-    background-color: rgb(47, 149, 191);
+.firstCol {
     align-content: center;
+    width: 560px;
+    height: 225px;
+}
+.secondCol {
+    width: 150px;
+    height: 225px;
+}
+
+p {
+text-align: center;
+
+}
+.thirdCol {
+    align-content: center;
+    width: 545px;
+    height: 350px;
+}
+.fourthCol{
+    background-color: rgb(0, 165, 239);
+    align-content: left;
     text-align: center;
-    /* width: 90px; */
     height: 400px;
-    /* grid-column-gap: 20px; */
-}
-
-.FourthCol{
-    background-color: aliceblue;
-    align-content: left;
-    text-align: center;
-    /* width: 100px; */
-    height: 500px;
-    /* grid-column-gap: 20px; */
-}
-
-.firstCol{
-    
-    background-color: rgb(47, 149, 191);
-    align-content: center;
-    width: 100px;
-    height: 300px;
-}
-
-.secondCol{
-    background-color:rgb(47, 149, 191);
-    align-content: left;
-    width: 100px;
-    height: 300px;
-}
-
-.container {
-    
-}
-.MediaPlayer{
-    text-align: center;
-    background-color:rgb(47, 149, 191);
-    position: absolute;
-
-
-}
-div.play{
-    position: absolute;
-    left: 318px;
-    color: #8c8a8a;
-    top: 844px;
-}
-div.back{
-    position: absolute;
-    left: 222px;
-    color: #8c8a8a;
-    top: 845px;
-}
-div.next{
-    position: absolute;
-    left: 405px;
-    color: #8c8a8a;
-    top: 845px;
-}
-div.like{
-    position: absolute;
-    left: 109px;
-    color: #5b49f5;
-    top: 846px;
-}
-
-.PL{
-    align-content: center;
-    position: absolute;
-    left: 627px;
-}
-
-.list{
-    align-content: center;
-    position: absolute;
-    left: 95px;
-    top: 30px;
-    
 }
 
 @media (max-width:360px){
