@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/Blue-Backgrounds-HD-005.jpg);
+    background-image: url(../images/bg.png);
     background-size: auto;
     background-repeat: repeat;
 }
@@ -44,7 +44,8 @@ p {
 }
 
 .logo {
-    font-family: 'Baloo Bhai', cursive;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5px;
 }
 
 .logo-right {

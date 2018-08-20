@@ -10,6 +10,14 @@ initApp = function () {
             var phoneNumber = user.phoneNumber;
             var providerData = user.providerData;
 
+            var database = firebase.database();
+
+            database.ref().push({
+                userid: [user.uid],
+                name: [user.displayName],
+                avatar: [user.photoURL]
+            });
+
             if (photoURL) {
                 drawPhoto(photoURL);
             }
@@ -17,30 +25,48 @@ initApp = function () {
             if (displayName) {
                 drawDisplayName(displayName);
             }
-
-            var database = firebase.database();
-
-            database.ref().on("value", function (snapshot) {
-                console.log(snapshot.val());
+            user.getIdToken().then(function (accessToken) {
+                document.getElementById('sign-in-status').textContent = 'Signed in';
+                document.getElementById('sign-in').textContent = 'Sign out';
+                document.getElementById('account-details').textContent = JSON.stringify({
+                    displayName: displayName,
+                    email: email,
+                    emailVerified: emailVerified,
+                    phoneNumber: phoneNumber,
+                    photoURL: photoURL,
+                    uid: uid,
+                    accessToken: accessToken,
+                    providerData: providerData
+                }, null, '  ');
             });
-
-            database.ref().push({
-                userid: [user.uid],
-                name: [user.displayName],
-                avatar: [user.photoURL]
-            });
+        } else {
+            // User is signed out.
+            document.getElementById('sign-in-status').textContent = 'Signed out';
+            document.getElementById('sign-in').textContent = 'Sign in';
+            document.getElementById('account-details').textContent = 'null';
         }
-    }, function (error) {});
+    }, function (error) {
+        console.log(error);
+    });
 };
 
 window.addEventListener('load', function () {
-    initApp()
+    initApp();
 });
 
 function drawPhoto(photoURL) {
     $('#photoID').attr("src", photoURL);
-}
+};
 
 function drawDisplayName(displayName) {
     $('#displayName').text("Welcome, " + displayName);
-}
+};
+
+function signOut() {
+    firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+    }, function (error) {
+        // An error happened.
+    });
+};
+
