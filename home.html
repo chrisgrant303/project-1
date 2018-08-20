@@ -93,70 +93,62 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="card text-white bg-primary mb-3 thirdCol">
-                    <div class=" card-header ">
-                        <i class="material-icons">thumb_up</i>
-                    </div>
-                    <div class="card-body ">
-                        <p class="card-text ">
-                            <audio controls>
-                                <source src="myAudio.mp3" type="audio/mp3">
-                                <source src="myAudio.ogg" type="audio/ogg">
-                                <p>Your browser doesn't support HTML5 audio. Here is a
-                                    <a href="myAudio.mp4">link to the audio</a> instead.</p>
-                            </audio>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 fourthCol">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Play List</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-
-                        </tr>
-
-                    </tbody>
-                </table>
+                <p class="card-text ">
+                    <!-- youtube iframe player -->
+                    <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&loop=1&modestbranding=1&rel=0"
+                        frameborder="0" allowfullscreen>
+                </p>
             </div>
         </div>
 
-    </div>
+
+        <div class="col-md-4 fourthCol">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Play List</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
+
     <img id="photoID">
+
 
     <!-- ALL SCRIPTS HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
         crossorigin='anonymous'></script>
+    <script src="assets/javascript/music.js"></script>
 </body>
 
 </html>
