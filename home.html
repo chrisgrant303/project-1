@@ -17,6 +17,26 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Compiled and minified JavaScript -->
+    <!-- ALL SCRIPTS HERE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
+    <link type="text/css " rel="stylesheet " href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css " />
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks ",
+            authDomain: "atmo-a53af.firebaseapp.com ",
+            databaseURL: "https://atmo-a53af.firebaseio.com ",
+            projectId: "atmo-a53af ",
+            storageBucket: "atmo-a53af.appspot.com ",
+            messagingSenderId: "907972133093 "
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 
 
@@ -56,11 +76,10 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card text-white bg-primary mb-3 firstCol">
-                    <div class=" card-header ">Weather</div>
-                    <div class="card-body ">
-                        <p class="card-text ">Partly Cloudy
-                            <img src="./assets/images/Weather-Snow.png" width="120px" height="120px" alt="" srcset="">
-                        </p>
+                    <div class="card-header" id="cityNameAPI"></div>
+                    <div class="card-body">
+                        <div class="card-text" id="weatherAPI"></div>
+                        <div id="iconAPI"></div>
 
                     </div>
                 </div>
@@ -69,8 +88,8 @@
                 <div class="card text-white bg-primary mb-3 secondCol">
                     <div class="card-header ">Temp</div>
                     <div class="card-body ">
-                        <h1 class="card-title ">35 ℉</h1>
-                        <p class="card-text "></p>
+                        <h1 class="card-title"></h1>
+                        <p class="card-text" id="tempAPI"></p>
                     </div>
                 </div>
             </div>
@@ -138,27 +157,8 @@
 
     </div>
     </div>
-
-    <!-- ALL SCRIPTS HERE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
-    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
-        crossorigin='anonymous'></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
-    <link type="text/css " rel="stylesheet " href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css " />
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js "></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks ",
-            authDomain: "atmo-a53af.firebaseapp.com ",
-            databaseURL: "https://atmo-a53af.firebaseio.com ",
-            projectId: "atmo-a53af ",
-            storageBucket: "atmo-a53af.appspot.com ",
-            messagingSenderId: "907972133093 "
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="./assets/javascript/app.js "></script>
+    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/weather.js"></script>
 </body>
 
 </html>
