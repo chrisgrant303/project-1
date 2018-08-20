@@ -138,6 +138,14 @@
 
     </div>
     </div>
+    <!-- NEED LOGIN BUTTON FOR OAUTH OF NAPSTER -->
+    <div class="container" id="login">
+        <div id="login-section">
+            <p>Log in with your Napster account and this demo will display information about you.</p>
+            <button class="btn btn-primary signin" id="btn-login">Login</button>
+        </div>
+        <div id="result"></div>
+    </div>
 
     <!-- ALL SCRIPTS HERE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
@@ -146,7 +154,15 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
     <link type="text/css " rel="stylesheet " href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css " />
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js "></script>
+    <!-- Need these scripts for napster please place ater jQUERY -->
+    <script src="assets/napster.js/src/napster.js">
+        Napster.init({
+            consumerKey: "NjIxOWQxNWEtYTE1NC00M2JiLWFkN2YtM2JiNjUwYTVlNmNm"
+        });
+    </script>
+    <script src="assets/javascript/napster-api.js"></script>
     <script>
+
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks ",
