@@ -10,6 +10,14 @@ initApp = function () {
             var phoneNumber = user.phoneNumber;
             var providerData = user.providerData;
 
+            if (photoURL) {
+                drawPhoto(photoURL);
+            }
+
+            if (displayName) {
+                drawDisplayName(displayName);
+            }
+
             var database = firebase.database();
 
             database.ref().on("value", function (snapshot) {
@@ -28,3 +36,11 @@ initApp = function () {
 window.addEventListener('load', function () {
     initApp()
 });
+
+function drawPhoto(photoURL) {
+    $('#photoID').attr("src", photoURL);
+}
+
+function drawDisplayName(displayName) {
+    $('#displayName').text("Welcome, " + displayName);
+}
