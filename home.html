@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
     <title>Document</title>
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
 
+=======
+    <title>Welcome to Atmo</title>
+>>>>>>> 225bfec7aef60df89a5a93641896d25fa5ebb6e3
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
@@ -17,12 +21,24 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks",
+            authDomain: "atmo-a53af.firebaseapp.com",
+            databaseURL: "https://atmo-a53af.firebaseio.com",
+            projectId: "atmo-a53af",
+            storageBucket: "atmo-a53af.appspot.com",
+            messagingSenderId: "907972133093"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="assets/javascript/firebase-database.js"></script>
 
     <!-- Compiled and minified JavaScript -->
 </head>
-
 
 <body>
     <!-- Nav -->
@@ -61,11 +77,10 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card text-white bg-primary mb-3 firstCol">
-                    <div class=" card-header ">Weather</div>
-                    <div class="card-body ">
-                        <p class="card-text ">Partly Cloudy
-                            <img src="./assets/images/Weather-Snow.png" width="120px" height="120px" alt="" srcset="">
-                        </p>
+                    <div class="card-header" id="cityNameAPI"></div>
+                    <div class="card-body">
+                        <div class="card-text" id="weatherAPI"></div>
+                        <div id="iconAPI"></div>
 
                     </div>
                 </div>
@@ -74,8 +89,8 @@
                 <div class="card text-white bg-primary mb-3 secondCol">
                     <div class="card-header ">Temp</div>
                     <div class="card-body ">
-                        <h1 class="card-title ">35 ℉</h1>
-                        <p class="card-text "></p>
+                        <h1 class="card-title"></h1>
+                        <p class="card-text" id="tempAPI"></p>
                     </div>
                 </div>
             </div>
@@ -143,43 +158,16 @@
 
     </div>
     </div>
-    <!-- NEED LOGIN BUTTON FOR OAUTH OF NAPSTER -->
-    <div class="container" id="login">
-        <div id="login-section">
-            <p>Log in with your Napster account and this demo will display information about you.</p>
-            <button class="btn btn-primary signin" id="btn-login">Login</button>
-        </div>
-        <div id="result"></div>
-    </div>
+
+    <img id="photoID">
+    <div id="displayName"></div>
 
     <!-- ALL SCRIPTS HERE -->
+    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/weather.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
         crossorigin='anonymous'></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js "></script>
-    <link type="text/css " rel="stylesheet " href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css " />
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js "></script>
-    <!-- Need these scripts for napster please place ater jQUERY -->
-    <script src="assets/napster.js/src/napster.js">
-        Napster.init({
-            consumerKey: "NjIxOWQxNWEtYTE1NC00M2JiLWFkN2YtM2JiNjUwYTVlNmNm"
-        });
-    </script>
-    <script src="assets/javascript/napster-api.js"></script>
-    <script>
-
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAVJek_4HLy4Im_H94iGEcmGgOSEhtJKks ",
-            authDomain: "atmo-a53af.firebaseapp.com ",
-            databaseURL: "https://atmo-a53af.firebaseio.com ",
-            projectId: "atmo-a53af ",
-            storageBucket: "atmo-a53af.appspot.com ",
-            messagingSenderId: "907972133093 "
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="./assets/javascript/app.js "></script>
 </body>
 
 </html>
