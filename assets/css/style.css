@@ -4,7 +4,13 @@ body {
     background-repeat: no-repeat;
 }
 
-nav {}
+h1 {
+    color: white;
+}
+
+/* nav {
+
+} */
 
 .firstCol {
     align-content: center;
@@ -33,12 +39,20 @@ p {
     text-align: center;
     height: 400px;
 }
+.logo {
+    font-family: 'Baloo Bhai', cursive;
+}
+.photoID {
+    border-radius: 50%;
+}
 
 @media (max-width:360px) {
     body {
         width: 100%;
     }
-    @media (max-width:780px) {
+}
+@media (max-width:780px) {
         body {
             width: 100%;
-        }
+    }
+}
