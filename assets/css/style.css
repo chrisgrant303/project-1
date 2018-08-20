@@ -44,6 +44,13 @@ p {
     font-family: 'Baloo Bhai', cursive;
 }
 
+.logo-right {
+    font-family: 'Baloo Bhai', cursive;
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 2.1rem;
+}
+
 .photoID {
     border-radius: 50%;
     width: 50px;
