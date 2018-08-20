@@ -14,6 +14,10 @@ initApp = function () {
                 drawPhoto(photoURL);
             }
 
+            if (displayName) {
+                drawDisplayName(displayName);
+            }
+
             var database = firebase.database();
 
             database.ref().on("value", function (snapshot) {
@@ -35,4 +39,8 @@ window.addEventListener('load', function () {
 
 function drawPhoto(photoURL) {
     $('#photoID').attr("src", photoURL);
+}
+
+function drawDisplayName(displayName) {
+    $('#displayName').text("Welcome, " + displayName);
 }
