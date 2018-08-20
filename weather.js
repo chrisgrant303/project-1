@@ -1,7 +1,3 @@
-var weather;
-var timeOfDay;
-var temperature;
-
 var weatherAPIKey = "cf49359bd70439b6a000e6a428e3e7fc";
 
 var weatherURL = "https://api.openweathermap.org/data/2.5/weather?" +
@@ -19,86 +15,120 @@ $("#weather").on("click", function () {
     alert("Weather code: " + weatherID)
 });
 
-$.ajax({
-    url: weatherURL,
-    method: "GET"
-})
-    .then(function (weatherResponse) {
+var timeOfDayData;
+var weatherData;
+var temperatureData;
 
-        var city = weatherResponse.name
+function callApi() {
 
-        $(".city").html("<h1>" + weatherResponse.name + " Weather</h1>");
-        $(".weather").html("Weather: " + weatherResponse.weather[0].description);
-        $(".temp").html("Temperature (F) " + weatherResponse.main.temp);
+    $.ajax({
+        url: weatherURL,
+        method: "GET"
+    })
+        .then(function (weatherResponse) {
 
-        //*IMPORTANT: BELOW IS THE ID (CODE/NUMER) THAT SPECIFIES THE WEATHER CONDITIONS. THIS WILL NOT BE DISPLAYED IN THE HTML*/
+            var city = weatherResponse.name
 
-        weatherID = weatherResponse.weather[0].id;
-        tempID = weatherResponse.main.temp;
+            console.log(weatherResponse);
 
-        if (weatherID === 800) {
-            weather = "clear";
-        }
-        else if (weatherID === 801 || weatherID === 802 || weatherID === 803) {
-            weather = "partly cloudy";
-        }
-        else if (weatherID === 804) {
-            weather = "cloudy";
-        }
-        else if (weatherID >= 700 && weatherID <= 781) {
-            weather = "misty";
-        }
-        else if (weatherID >= 600 && weatherID <= 621) {
-            weather = "snowy";
-        }
-        else if (weatherID >= 500 && weatherID <= 531) {
-            weather = "raining";
-        }
-        else if (weatherID >= 300 && weatherID <= 321) {
-            weather = "drizzling";
-        }
-        else if (weatherID >= 200 && weatherID <= 232) {
-            weather = "thunderstorms";
-        }
-        else {
-            weather = "error";
-        }
+            $(".city").html("<h1>" + weatherResponse.name + " Weather</h1>");
+            $(".weather").html("Weather: " + weatherResponse.weather[0].description);
+            $(".temp").html("Temperature (F) " + weatherResponse.main.temp);
 
-        if (tempID >= 72 && tempID <= 80) {
-            temperature = "hot";
+            //*IMPORTANT: BELOW IS THE ID (CODE/NUMER) THAT SPECIFIES THE WEATHER CONDITIONS. THIS WILL NOT BE DISPLAYED IN THE HTML*/
 
-        } else if (tempID >= 81 && tempID <= 110) {
-            temperature = "very hot";
+            weatherID = weatherResponse.weather[0].id;
+            tempID = weatherResponse.main.temp;
 
-        } else if (tempID >= 58 && tempID <= 71) {
-            temperature = "mild";
+            if (weatherID === 800) {
+                weather = "clear";
+            }
+            else if (weatherID === 801 || weatherID === 802 || weatherID === 803) {
+                weather = "partly cloudy";
+            }
+            else if (weatherID === 804) {
+                weather = "cloudy";
+            }
+            else if (weatherID >= 700 && weatherID <= 781) {
+                weather = "hazy";
+            }
+            else if (weatherID >= 600 && weatherID <= 621) {
+                weather = "snowy";
+            }
+            else if (weatherID >= 500 && weatherID <= 531) {
+                weather = "raining";
+            }
+            else if (weatherID >= 300 && weatherID <= 321) {
+                weather = "drizzling";
+            }
+            else if (weatherID >= 200 && weatherID <= 232) {
+                weather = "thunderstorms";
+            }
+            else {
+                weather = "error";
+            }
 
-        } else if (tempID >= 48 && tempID <= 57) {
-            temperature = "cool"
+            if (tempID >= 72 && tempID <= 80) {
+                temperature = "hot";
 
-        } else if (tempID >= 0 && tempID <= 47) {
-            temperature = "cold"
+            } else if (tempID >= 81 && tempID <= 110) {
+                temperature = "very hot";
 
-        }
-        if (hour >= 00 && hour < 06) {
-            timeOfDay = "early morning";
-        }
-        else if (hour >= 06 && hour < 12) {
-            timeOfDay = "morning";
-        }
-        else if (hour >= 12 && hour < 16) {
-            timeOfDay = "afternoon";
-        }
-        else if (hour >= 16 && hour < 19) {
-            timeOfDay = "evening";
-        }
-        else {
-            timeOfDay = "night";
-        }
-        console.log(timeOfDay);
-        console.log(weather);
-        console.log(temperature)
-    });
+            } else if (tempID >= 58 && tempID <= 71) {
+                temperature = "mild";
+
+            } else if (tempID >= 48 && tempID <= 57) {
+                temperature = "cool"
+
+            } else if (tempID >= 0 && tempID <= 47) {
+                temperature = "cold"
+
+            }
+            if (hour >= 00 && hour < 06) {
+                timeOfDay = "early morning";
+            }
+            else if (hour >= 06 && hour < 12) {
+                timeOfDay = "morning";
+            }
+            else if (hour >= 12 && hour < 16) {
+                timeOfDay = "afternoon";
+            }
+            else if (hour >= 16 && hour < 19) {
+                timeOfDay = "evening";
+            }
+            else {
+                timeOfDay = "night";
+            }
+
+            // console.log(timeOfDay);
+            // console.log(weather);
+            // console.log(temperature);
+
+            timeOfDay = timeOfDay;
+            weather = weather;
+            temperature = temperature;
+
+        });
+
+}
+
+callApi(weatherResponse).then(function (weatherResponse) {
+
+    console.log(weatherData.timeOfDay);
+    console.log(weatherData.weather);
+    console.log(weatherData.temperature);
+
+});
+
+var timeOfDayData;
+var weatherData;
+var temperatureData;
+
+// console.log(timeOfDay);
+// console.log(weather);
+// console.log(temperature);
+
+
 
 
 
