@@ -8,13 +8,13 @@ h1 {
     color: white;
 }
 
-/* nav {
-
-} */
+nav {
+width: auto;
+}
 
 .firstCol {
     align-content: center;
-    width: 560px;
+    width: 420px;
     height: 225px;
 }
 
@@ -26,6 +26,9 @@ h1 {
 p {
     text-align: center;
 }
+.card-header{
+    font-family: 'Varela Round', sans-serif;
+} 
 
 .thirdCol {
     align-content: center;
