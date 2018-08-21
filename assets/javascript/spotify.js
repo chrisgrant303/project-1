@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    debugger;
 
     // Get the hash of the url
     const hash = window.location.hash
@@ -31,18 +30,13 @@ $(document).ready(function () {
 
     // If there is no token, redirect to Spotify authorization
     if (!_token) {
-        debugger;
         window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
 
-    // Set up the Web Playback SDK
-
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-        const token = 'BQB0X4-PYRvW9dDne6ZXovd2QPYHmW3_xox1HQ_15CYOTZM99VRCaDSE3rGLA-GOmF5h30NXiui01sBFIghK6uKju2wlqInyaZC81OauFQovlM1HIAfVEs0VxON7BEqm5WeNw31HRse3Nqkm9_aJwItASqexxof767-W';
+    window.onSpotifyPlayerAPIReady = () => {
         const player = new Spotify.Player({
-            name: 'Web Playback SDK Quick Start Player',
-            getOAuthToken: cb => { cb(token); }
+            name: 'Web Playback SDK Template',
+            getOAuthToken: cb => { cb(_token); }
         });
 
         // Error handling
@@ -50,7 +44,6 @@ $(document).ready(function () {
         player.on('authentication_error', e => console.error(e));
         player.on('account_error', e => console.error(e));
         player.on('playback_error', e => console.error(e));
-
 
         // Playback status updates
         player.on('player_state_changed', state => {
