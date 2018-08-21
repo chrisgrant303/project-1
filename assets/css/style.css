@@ -13,10 +13,6 @@ h1 {
     font-family: 'Baloo Bhai', cursive;
 }
 
-.titleBox {
-    justify-content: center;
-    flex: flex;
-}
 
 .jumbotron{
     background: url("../images/jumbo.jpg") no-repeat center center; 
