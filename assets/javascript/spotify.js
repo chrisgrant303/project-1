@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     // Replace with your app's client ID, redirect URI and desired scopes
     const clientId = '36076a64775d4d6fb8ea7aa378875291';
-    const redirectUri = 'https://bobbiro2e.github.io/playground-1';
+    const redirectUri = 'https://bobbiro2e.github.io/playground-1/home.html';
     const scopes = [
         'streaming',
         'user-read-birthdate',
@@ -31,6 +31,7 @@ $(document).ready(function () {
 
     // If there is no token, redirect to Spotify authorization
     if (!_token) {
+        debugger;
         window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
 
