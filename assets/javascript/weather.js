@@ -11,10 +11,6 @@ var time = moment().format("hh:mm");
 var hour = parseInt(moment().format("HH"));
 timeDiv.text("Time: " + time);
 
-$("#weather").on("click", function () {
-    alert("Weather code: " + weatherID)
-});
-
 $.ajax({
     url: weatherURL,
     method: "GET"
@@ -34,7 +30,7 @@ $.ajax({
         //*IMPORTANT: BELOW IS THE ID (CODE/NUMER) THAT SPECIFIES THE WEATHER CONDITIONS. THIS WILL NOT BE DISPLAYED IN THE HTML*/
 
         weatherID = weatherResponse.weather[0].id;
-        tempID = weatherResponse.main.temp;
+        tempID = Math.floor(weatherResponse.main.temp);
 
         if (weatherID === 800) {
             weather = "clear";
@@ -78,7 +74,8 @@ $.ajax({
 
         } else if (tempID >= 0 && tempID <= 47) {
             temperature = "cold"
-
+        } else {
+            console.log("error")
         }
         if (hour >= 00 && hour < 06) {
             timeOfDay = "early morning";
@@ -99,31 +96,21 @@ $.ajax({
         console.log(timeOfDay);
         console.log(weather);
         console.log(temperature);
+        printTimeOfDay(timeOfDay);
 
     });
 
-setTimeout(function dayTime() {
-
-    if (timeOfDay === "morning" || timeOfDay === "afternoon" || timeOfDay === "evening") {
+function printTimeOfDay(time) {
+    if (time === "morning" || time === "afternoon" || time === "evening") {
         console.log("execute daytime playlist")
     }
-    else {
-        console.log("it's night time!")
-    }
 
-}, 500);
-
-setTimeout(function nightTime() {
-
-    if (timeOfDay === "night" || timeOfDay === "early morning") {
+    else if (time === "night" || time === "early morning") {
         console.log("execute night time playlist")
     }
     else {
-        console.log("its")
+        console.log("no time found")
     }
 }
-
-}, 500);
-
 
 
