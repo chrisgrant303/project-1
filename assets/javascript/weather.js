@@ -119,9 +119,9 @@ setTimeout(function nightTime() {
         console.log("execute night time playlist")
     }
     else {
-        console.log("it's daytime")
+        console.log("its")
     }
-
+}
 
 }, 500);
 
