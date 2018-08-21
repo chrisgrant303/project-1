@@ -36,10 +36,9 @@ $(document).ready(function () {
     // Set up the Web Playback SDK
 
 
-    window.onSpotifyWebPlaybackSDKReady = () => {
-
+    window.onSpotifyPlayerAPIReady = () => {
         const player = new Spotify.Player({
-            name: 'Web Playback SDK Quick Start Player',
+            name: 'Web Playback SDK Template',
             getOAuthToken: cb => { cb(_token); }
         });
 
@@ -48,7 +47,6 @@ $(document).ready(function () {
         player.on('authentication_error', e => console.error(e));
         player.on('account_error', e => console.error(e));
         player.on('playback_error', e => console.error(e));
-
 
         // Playback status updates
         player.on('player_state_changed', state => {
