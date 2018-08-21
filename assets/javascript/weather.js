@@ -15,12 +15,6 @@ $("#weather").on("click", function () {
     alert("Weather code: " + weatherID)
 });
 
-var timeOfDayData;
-var weatherData;
-var temperatureData;
-
-
-
 $.ajax({
     url: weatherURL,
     method: "GET"
@@ -35,6 +29,7 @@ $.ajax({
         $("#weatherAPI").html(weatherResponse.weather[0].description);
         $("#iconAPI").html("<img src='http://openweathermap.org/img/w/" + weatherResponse.weather[0].icon + ".png'>");
         $("#tempAPI").html(Math.round(weatherResponse.main.temp) + " ℉");
+
 
         //*IMPORTANT: BELOW IS THE ID (CODE/NUMER) THAT SPECIFIES THE WEATHER CONDITIONS. THIS WILL NOT BE DISPLAYED IN THE HTML*/
 
@@ -105,9 +100,30 @@ $.ajax({
         console.log(weather);
         console.log(temperature);
 
-
-
     });
+
+setTimeout(function dayTime() {
+
+    if (timeOfDay === "morning" || timeOfDay === "afternoon" || timeOfDay === "evening") {
+        console.log("execute daytime playlist")
+    }
+    else {
+        console.log("it's night time!")
+    }
+
+}, 500);
+
+setTimeout(function nightTime() {
+
+    if (timeOfDay === "night" || timeOfDay === "early morning") {
+        console.log("execute night time playlist")
+    }
+    else {
+        console.log("it's daytime")
+    }
+
+
+}, 500);
 
 
 
