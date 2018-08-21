@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     // Replace with your app's client ID, redirect URI and desired scopes
     const clientId = '36076a64775d4d6fb8ea7aa378875291';
-    const redirectUri = 'http://chrisgrant303.github.io/project-1';
+    const redirectUri = 'https://bobbiro2e.github.io/playground-1';
     const scopes = [
         'streaming',
         'user-read-birthdate',
