@@ -26,24 +26,11 @@ initApp = function () {
                 drawDisplayName(displayName);
             }
             user.getIdToken().then(function (accessToken) {
-                document.getElementById('sign-in-status').textContent = 'Signed in';
-                document.getElementById('sign-in').textContent = 'Sign out';
-                document.getElementById('account-details').textContent = JSON.stringify({
-                    displayName: displayName,
-                    email: email,
-                    emailVerified: emailVerified,
-                    phoneNumber: phoneNumber,
-                    photoURL: photoURL,
-                    uid: uid,
-                    accessToken: accessToken,
-                    providerData: providerData
-                }, null, '  ');
+                console.log("signed in");
             });
         } else {
             // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').textContent = 'Sign in';
-            document.getElementById('account-details').textContent = 'null';
+            console.log("signed out");
         }
     }, function (error) {
         console.log(error);

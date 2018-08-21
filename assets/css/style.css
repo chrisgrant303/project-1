@@ -8,6 +8,24 @@ h1 {
     color: white;
 }
 
+.title-head {
+    justify-content: center;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.titleBox {
+    justify-content: center;
+    flex: flex;
+}
+
+.jumbotron{
+    background: url("../images/jumbo.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
 nav {
 width: auto;
 }
