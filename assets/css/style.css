@@ -40,6 +40,7 @@ width: auto;
 p {
     text-align: center;
 }
+
 .card-header{
     font-family: 'Varela Round', sans-serif;
 } 
@@ -58,7 +59,7 @@ p {
 }
 
 .logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 5px;
 }
 
@@ -75,6 +76,18 @@ p {
     height: 50px;
     margin-left: 50px;
     margin-right: 25px;
+}
+
+#tempAPI {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 45px;
+    color: white
+}
+
+#weatherAPI {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 45px;
+    color: white
 }
 
 @media (max-width:360px) {
