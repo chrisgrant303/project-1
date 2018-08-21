@@ -34,12 +34,12 @@ $(document).ready(function () {
     }
 
     // Set up the Web Playback SDK
-
-
     window.onSpotifyPlayerAPIReady = () => {
         const player = new Spotify.Player({
             name: 'Web Playback SDK Template',
-            getOAuthToken: cb => { cb(_token); }
+            getOAuthToken: cb => {
+                cb(_token);
+            }
         });
 
         // Error handling
@@ -72,8 +72,10 @@ $(document).ready(function () {
         $.ajax({
             url: "https://api.spotify.com/v1/me/player/play?device_id=" + device_id,
             type: "PUT",
-            data: '{"uris": ["spotify:track:5ya2gsaIhTkAuWYEMB0nw5"]}',
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + _token); },
+            data: '{"uris": ["spotify:track:0mBkoM8r7KAQzZij5swTUL"]}',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + _token);
+            },
             success: function (data) {
                 console.log(data)
             }
