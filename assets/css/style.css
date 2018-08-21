@@ -36,6 +36,9 @@ width: auto;
     width: 150px;
     height: 225px;
 }
+#displayName {
+    font-size: 15px;
+}
 
 p {
     text-align: center;
@@ -60,10 +63,9 @@ p {
 
 .logo {
     font-family: 'Varela Round', sans-serif;
-    font-size: 5px;
+    font-size: 2px;
 }
-
-.logo-right {
+.logo-center {
     font-family: 'Baloo Bhai', cursive;
     display: inline-block;
     margin-right: 50px;
@@ -79,15 +81,15 @@ p {
 }
 
 #tempAPI {
-    font-family: 'Baloo Bhai', cursive;
-    font-size: 45px;
-    color: white
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
+    color: white;
 }
 
 #weatherAPI {
-    font-family: 'Baloo Bhai', cursive;
-    font-size: 45px;
-    color: white
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
+    color: white;
 }
 
 @media (max-width:360px) {
@@ -97,6 +99,11 @@ p {
 }
 
 @media (max-width:780px) {
+    body {
+        width: 100%;
+    }
+}
+@media (max-width:480px) {
     body {
         width: 100%;
     }
