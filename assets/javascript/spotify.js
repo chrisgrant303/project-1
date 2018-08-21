@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     // Set token
     let _token = hash.access_token;
-
+    console.log(_token);
     const authEndpoint = 'https://accounts.spotify.com/authorize';
 
     // Replace with your app's client ID, redirect URI and desired scopes
