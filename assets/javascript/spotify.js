@@ -33,9 +33,13 @@ $(document).ready(function () {
         window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
 
-    window.onSpotifyPlayerAPIReady = () => {
+    // Set up the Web Playback SDK
+
+
+    window.onSpotifyWebPlaybackSDKReady = () => {
+
         const player = new Spotify.Player({
-            name: 'Web Playback SDK Template',
+            name: 'Web Playback SDK Quick Start Player',
             getOAuthToken: cb => { cb(_token); }
         });
 
@@ -44,6 +48,7 @@ $(document).ready(function () {
         player.on('authentication_error', e => console.error(e));
         player.on('account_error', e => console.error(e));
         player.on('playback_error', e => console.error(e));
+
 
         // Playback status updates
         player.on('player_state_changed', state => {
