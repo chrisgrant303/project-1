@@ -90,6 +90,7 @@ p {
     font-family: 'Kanit', sans-serif;
     font-size: 35px;
     color: white;
+    float: left;
 }
 
 .add-song{
@@ -120,6 +121,10 @@ tbody {
 }
 .musicList{
     width: 500px;
+}
+#icon {
+    height: 60px;
+    width: 60px;
 }
 
 @media (max-width:360px) {
