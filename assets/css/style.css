@@ -46,6 +46,7 @@ p {
 
 .card-header {
     font-family: 'Varela Round', sans-serif;
+
 }
 
 .thirdCol {
@@ -97,7 +98,10 @@ p {
     /* text-align: left; */
     color: white;
 }
-
+.playlistHeader {
+    padding: 0;
+    border-radius: 0;
+}
 .table {
     width: 500px
 }
@@ -113,7 +117,8 @@ tr {
 }
 
 tbody {
-    background-color: #2D78EE;
+    background-color: rgb(242, 242, 243);
+    color: rgb(59, 59, 59);
 }
 
 /* .inputSlot {
