@@ -24,7 +24,7 @@ $.ajax({
         $("#cityNameAPI").html(weatherResponse.name + " Weather");
         $("#weatherAPI").html(weatherResponse.weather[0].description);
         $("#iconAPI").html("<img src='http://openweathermap.org/img/w/" + weatherResponse.weather[0].icon + ".png'>");
-        $("#tempAPI").html(Math.round(weatherResponse.main.temp) + " ℉");
+        $("#tempAPI").html(Math.round(weatherResponse.main.temp) + "º");
 
 
         //*IMPORTANT: BELOW IS THE ID (CODE/NUMER) THAT SPECIFIES THE WEATHER CONDITIONS. THIS WILL NOT BE DISPLAYED IN THE HTML*/
