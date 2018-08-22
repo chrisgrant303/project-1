@@ -55,7 +55,7 @@ p {
 }
 
 .fourthCol {
-    align-content: left;
+    align-content: center;
     text-align: center;
     height: 100px;
     width: 400px;
@@ -90,6 +90,36 @@ p {
     font-family: 'Kanit', sans-serif;
     font-size: 35px;
     color: white;
+}
+
+.add-song{
+text-align: left;   
+color: white;
+}
+.table{
+    width: 500px
+}
+th {
+    background-color: #2D78EE;
+    color: white;
+    width: 100px;  
+}
+tr {
+    font-family: 'Varela Round', sans-serif;
+}
+tbody {
+    background-color:  #2D78EE;
+    
+}
+.inputSlot{
+    width: 400px;
+}
+.inputDiv{
+    width: 500px;
+    align-content: center;
+}
+.musicList{
+    width: 500px;
 }
 
 @media (max-width:360px) {
