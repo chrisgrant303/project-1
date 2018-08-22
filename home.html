@@ -54,7 +54,7 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-md-2 mx-auto">
+            <div class="mx-auto">
                 <div class="card text-white bg-primary firstCol">
                     <div class="card-header" id="cityNameAPI">Chicago Weather</div>
                     <div class="card-body">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-2 mx-auto">
+            <div class="mx-auto">
                 <div class="card text-white bg-primary secondCol">
                     <div class="card-header ">Temperature</div>
                     <div class="card-body ">
@@ -76,71 +76,71 @@
     </div>
 
     <!-- Div Row  2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <div class="card text-white bg-primary">
-                    <div class=" card-header ">
-                        <i class="material-icons">thumb_up</i>
-                    </div>
-                    <div class="card-body ">
-                        <p class="card-text ">
-                            <!-- spotify current track -->
-                            <img id="current-track" />
-                            <h3 id="current-track-name"></h3>
-                        </p>
-                    </div>
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="mx-auto">
+            <div class="card text-white bg-primary">
+                <div class=" card-header ">
+                    <i class="material-icons">thumb_up</i>
+                </div>
+                <div class="card-body ">
+                    <p class="card-text ">
+                        <!-- spotify current track -->
+                        <img id="current-track" />
+                        <h3 id="current-track-name"></h3>
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
+    </div>
+    <!-- <div class="row">
             <div class="col-md-8 fourthCol mx-auto">
                 <div class="card text-white bg-primary"> -->
 
-        <!-- tables for the playlist -->
-        <table class="col-md-8 table mx-auto">
-            <thead>
-                <tr>
-                    <th id="col musicList">Music Playlist</th>
-                </tr>
-            </thead>
-            <tbody class="text center">
+    <!-- tables for the playlist -->
+    <table class="col-sm-8 col-md-6 mx-auto">
+        <thead>
+            <tr>
+                <th id="col musicList">Music Playlist</th>
+            </tr>
+        </thead>
+        <tbody class="text center">
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 
-        <br>
-        <div>
-            <div class="card inputDiv mx-auto">
-                <div class="card-header add-song" style="background-color: #2D78EE">
-                    Create Your Playlist:
-                </div>
+    <br>
+    <div>
+        <div class="card col-sm-8 col-md-6 mx-auto">
+            <div class="card-header add-song" style="background-color: #2D78EE">
+                Create Your Playlist:
+            </div>
 
-                <div class="card-body inputSlot">
-                    <label for="SongTitle"></label>
-                    <input type="songInput" class="form-control sm" id="songInput">
-                    <div>
-                        <button type="button" class="btn btn-outline-primary sm">add here</button>
-                    </div>
+            <div class="card-body inputSlot">
+                <label for="SongTitle"></label>
+                <input type="songInput" class="form-control sm" id="songInput">
+                <div>
+                    <button type="button" class="btn btn-outline-primary sm">add here</button>
                 </div>
             </div>
         </div>
-        <!-- </div>
+    </div>
+    <!-- </div>
             </div> -->
 
-        <div id="sign-in-status"></div>
-        <div id="sign-in"></div>
-        <div id="account-details"></div>
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-details"></div>
 
-        <!-- ALL SCRIPTS HERE -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-        <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
-            crossorigin='anonymous'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
-        <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
-        <script src="assets/javascript/firebase-database.js"></script>
-        <script src="assets/javascript/weather.js"></script>
-        <!-- <script src="assets/javascript/spotify.js"></script> -->
+    <!-- ALL SCRIPTS HERE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+    <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
+    <script src="assets/javascript/firebase-database.js"></script>
+    <script src="assets/javascript/weather.js"></script>
+    <!-- <script src="assets/javascript/spotify.js"></script> -->
 
 </body>
 
