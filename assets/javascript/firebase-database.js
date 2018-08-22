@@ -13,16 +13,6 @@ initApp = function () {
 
             var database = firebase.database();
 
-            // playlist row/div:
-            database.ref().on("child_added", function (snapshot) {
-                var data = snapshot.val();
-
-                $("table").append(`<tr>
-        <td>${data.SongTitle}</td>
-        </tr>`);
-
-            });
-
             database.ref().push({
                 userid: [user.uid],
                 name: [user.displayName],
@@ -81,5 +71,8 @@ $("button").on("click", function () {
 
     $("#songInput").val("");
 
+    $("table").append(`<tr>
+        <td>${SongTitle}</td>
+        </tr>`);
 
 });
