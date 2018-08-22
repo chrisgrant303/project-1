@@ -23,7 +23,7 @@ $.ajax({
 
         $("#cityNameAPI").html(weatherResponse.name + " Weather");
         $("#weatherAPI").html(weatherResponse.weather[0].description);
-        $("#iconAPI").html("<img src='http://openweathermap.org/img/w/" + weatherResponse.weather[0].icon + ".png'>");
+        $("#iconAPI").html("<img id='icon' src='http://openweathermap.org/img/w/" + weatherResponse.weather[0].icon + ".png'>");
         $("#tempAPI").html(Math.round(weatherResponse.main.temp) + "º");
 
 
