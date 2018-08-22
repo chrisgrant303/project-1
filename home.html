@@ -50,7 +50,8 @@
     </nav>
 
     <!-- Div Row  1 -->
-    <br><br>
+    <br>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-md-2 mx-auto">
@@ -92,53 +93,54 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 fourthCol mx-auto">
-                <div class="card text-white bg-primary">
-                    <div class="card-header">
-                        <i>Youtube Music Playlist</i>
+                <div class="card text-white bg-primary"> -->
+
+        <!-- tables for the playlist -->
+        <table class="table mx-auto">
+            <thead>
+                <tr>
+                    <th id="col musicList">Music Playlist</th>
+                </tr>
+            </thead>
+            <tbody class="text center">
+
+            </tbody>
+        </table>
+
+        <br>
+        <div>
+            <div class="card inputDiv mx-auto">
+                <div class="card-header add-song" style="background-color: #2D78EE">
+                    Create Your Playlist:
+                </div>
+
+                <div class="card-body inputSlot">
+                    <label for="SongTitle"></label>
+                    <input type="songInput" class="form-control sm" id="songInput">
+                    <div>
+                        <button type="button" class="btn btn-outline-primary sm">add here</button>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row" id="track1">1</th>
-                            </tr>
-                            <tr>
-                                <th scope="row" id="track2">2</th>
-                            </tr>
-                            <tr>
-                                <th scope="row" id="track3">3</th>
-                            </tr>
-                            <tr>
-                                <th scope="row" id="track4">4</th>
-                            </tr>
-                            <tr>
-                                <th scope="row" id="track5">5</th>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- </div>
+            </div> -->
 
-    <div id="sign-in-status">""</div>
-    <div id="sign-in">""</div>
-    <div id="account-details">""</div>
+        <div id="sign-in-status">""</div>
+        <div id="sign-in">""</div>
+        <div id="account-details">""</div>
 
-    <!-- ALL SCRIPTS HERE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
-        crossorigin='anonymous'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-    <script src="assets/javascript/firebase-database.js"></script>
-    <script src="assets/javascript/weather.js"></script>
-    <script src="assets/javascript/spotify.js"></script>
+        <!-- ALL SCRIPTS HERE -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+            crossorigin='anonymous'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+        <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
+        <script src="assets/javascript/firebase-database.js"></script>
+        <script src="assets/javascript/weather.js"></script>
+        <!-- <script src="assets/javascript/spotify.js"></script> -->
 
 </body>
 

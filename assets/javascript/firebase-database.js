@@ -13,10 +13,25 @@ initApp = function () {
 
             var database = firebase.database();
 
+            // playlist row/div:
+            database.ref().on("child_added", function (snapshot) {
+                var data = snapshot.val();
+
+                $("table").append(`<tr>
+        <td>${data.SongTitle}</td>
+        </tr>`);
+
+            });
+
             database.ref().push({
                 userid: [user.uid],
                 name: [user.displayName],
-                avatar: [user.photoURL]
+                avatar: [user.photoURL],
+            });
+
+            database.ref().push({
+                SongTitle: [songInput]
+                // ^Title is for the song input
             });
 
             if (photoURL) {
@@ -58,3 +73,13 @@ function signOut() {
     });
 };
 
+
+// JS Firebase for the input side
+$("button").on("click", function () {
+    var SongTitle = $("#songInput").val();
+    console.log(SongTitle);
+
+    $("#songInput").val("");
+
+
+});
